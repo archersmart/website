@@ -13,21 +13,23 @@ import Community from "./components/Community.vue";
 import Contact from "./components/Contact.vue";
 import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
+import Product from "./components/Product.vue";
 </script>
 
 <template>
   <Navbar />
   <Hero />
+  <Product />
   <Sponsors />
   <Benefits />
   <Features />
   <Services />
-  <HowItWorks />
-  <Testimonials />
+  <!-- <HowItWorks /> -->
+  <!-- <Testimonials /> -->
   <Team />
-  <Community />
-  <Pricing />
+  <!-- <Community /> -->
+  <!-- <Pricing /> -->
   <Contact />
-  <FAQ />
+  <!-- <FAQ /> -->
   <Footer />
 </template>

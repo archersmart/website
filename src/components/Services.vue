@@ -35,12 +35,12 @@ const serviceList: ServiceProps[] = [
   {
     title: "AI助手",
     description: "智能问答助手，基于企业知识提供准确回答和建议。",
-    pro: 1,
+    pro: 0,
   },
   {
     title: "数据分析",
     description: "深度分析知识使用情况，优化知识结构和流程。",
-    pro: 1,
+    pro: 0,
   },
 ];
 </script>

@@ -8,9 +8,9 @@ import { ArrowRight } from "lucide-vue-next";
 </script>
 
 <template>
-  <section class="container">
+  <section>
     <div
-      class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32"
+      class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pt-32 pb-8 md:pt-32 pb-8"
     >
       <div class="text-center space-y-8">
         <Badge

@@ -60,16 +60,16 @@ const routeList: RouteProps[] = [
 
 const featureList: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
+    title: "AI Infra(LLMOS)",
     description: "Highlight how your product solves user problems.",
   },
   {
-    title: "Build Trust",
+    title: "ArcherSmart Search",
     description:
       "Leverages social proof elements to establish trust and credibility.",
   },
   {
-    title: "Capture Leads",
+    title: "ArcherSmart Agent(APS)",
     description:
       "Make your lead capture form visually appealing and strategically.",
   },
@@ -156,15 +156,15 @@ const isOpen = ref<boolean>(false);
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
-            Features
+            产品
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div class="grid w-[600px] grid-cols-2 gap-5 p-4">
-              <img
+            <div class="grid w-[400px] grid-cols-1 gap-5 p-4">
+              <!-- <img
                 src="https://www.radix-vue.com/logo.svg"
                 alt="Beach"
                 class="h-full w-full rounded-md object-cover"
-              />
+              /> -->
               <ul class="flex flex-col gap-2">
                 <li
                   v-for="{ title, description } in featureList"
