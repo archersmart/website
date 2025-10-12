@@ -2,90 +2,75 @@
 import { Marquee } from "@selemondev/vue3-marquee";
 import "@selemondev/vue3-marquee/dist/style.css";
 
-import {
-  Crown,
-  Vegan,
-  Ghost,
-  Puzzle,
-  Squirrel,
-  Cookie,
-  Drama,
-} from "lucide-vue-next";
+// Import sponsor images
+import AntaGroupImg from "@/assets/sponsors/ANTA_GROUP.png";
+import BamaTeaImg from "@/assets/sponsors/BAMA_TEA.png";
+import BMWImg from "@/assets/sponsors/BMW.png";
+import BeneunderImg from "@/assets/sponsors/Beneunder.png";
+import IgarashiImg from "@/assets/sponsors/IGARASHI.png";
+import JomooImg from "@/assets/sponsors/JOMOO.png";
+import NEPImg from "@/assets/sponsors/NEP.png";
+import StarbucksImg from "@/assets/sponsors/STARBUCKS.png";
+import STIHLImg from "@/assets/sponsors/STIHL.png";
+import SchneiderImg from "@/assets/sponsors/Schneider.png";
+import SinexcelImg from "@/assets/sponsors/Sinexcel.png";
+import WalmartImg from "@/assets/sponsors/Walmart.png";
 
 interface sponsorsProps {
-  icon: string;
+  image: string;
   name: string;
 }
 
 const sponsors: sponsorsProps[] = [
   {
-    icon: "crown",
+    image: BamaTeaImg,
     name: "八马茶业",
   },
   {
-    icon: "vegan",
+    image: IgarashiImg,
     name: "IGARASHI",
   },
   {
-    icon: "ghost",
+    image: JomooImg,
     name: "九牧",
   },
   {
-    icon: "puzzle",
+    image: NEPImg,
     name: "大洋",
   },
   {
-    icon: "squirrel",
+    image: STIHLImg,
     name: "斯蒂尔",
   },
   {
-    icon: "cookie",
-    name: "安踏",
+    image: AntaGroupImg,
+    name: "安踏集团",
   },
   {
-    icon: "drama",
+    image: BeneunderImg,
     name: "蕉下",
   },
   {
-    icon: "drama",
+    image: SinexcelImg,
     name: "盛弘股份",
   },
   {
-    icon: "drama",
+    image: StarbucksImg,
     name: "星巴克",
   },
   {
-    icon: "drama",
+    image: WalmartImg,
     name: "沃尔玛",
   },
   {
-    icon: "drama",
+    image: BMWImg,
     name: "宝马",
   },
   {
-    icon: "drama",
+    image: SchneiderImg,
     name: "施耐德电气",
   },
 ];
-
-const iconMap: Record<
-  string,
-  | typeof Crown
-  | typeof Vegan
-  | typeof Ghost
-  | typeof Puzzle
-  | typeof Squirrel
-  | typeof Cookie
-  | typeof Drama
-> = {
-  crown: Crown,
-  vegan: Vegan,
-  ghost: Ghost,
-  puzzle: Puzzle,
-  squirrel: Squirrel,
-  cookie: Cookie,
-  drama: Drama,
-};
 </script>
 
 <template>
@@ -93,28 +78,28 @@ const iconMap: Record<
     id="sponsors"
     class="max-w-[75%] mx-auto pb-24 sm:pb-32"
   >
-    <h2 class="text-lg md:text-xl text-center mb-6">
-      合作客户
+    <h2 class="text-lg md:text-xl text-center mb-16">
+      客户
     </h2>
 
     <div class="mx-auto">
       <Marquee
-        class="gap-[3rem]"
+        class="gap-[4rem]"
         :pauseOnHover="true"
         :fade="true"
-        innerClassName="gap-[3rem]"
+        innerClassName="gap-[4rem]"
       >
         <div
-          v-for="{ icon, name } in sponsors"
+          v-for="{ image, name } in sponsors"
           :key="name"
+          class="w-40"
         >
-          <div class="flex items-center text-xl md:text-2xl font-medium">
-            <component
-              :is="iconMap[icon]"
-              class="mr-2"
-              stroke-width="3"
+          <div class="flex items-center justify-center">
+            <img
+              :src="image"
+              :alt="name"
+              class="h-16 md:h-24 lg:h-36 object-contain transition-all duration-300"
             />
-            {{ name }}
           </div>
         </div>
       </Marquee>
