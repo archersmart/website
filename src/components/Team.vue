@@ -26,10 +26,15 @@ interface SocialNetworkProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3",
-    firstName: "张",
-    lastName: "博士",
-    positions: ["创始人 & CEO", "前阿里巴巴技术专家"],
+    imageUrl: "",
+    firstName: "",
+    lastName: "陈广博",
+    positions: [
+      "创始人 & CEO", 
+      "前Rancher / SUSE 中国区研发负责人", 
+      "Rancher、Harvester 核心代码贡献者",
+      'Harvester 创始团队技术负责人',
+    ],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -38,10 +43,14 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3",
-    firstName: "李",
-    lastName: "博士",
-    positions: ["联合创始人 & CTO", "AI算法专家"],
+    imageUrl: "",
+    firstName: "",
+    lastName: "刘燕",
+    positions: [
+      "联合创始人 & COO", 
+      "前新加坡高级公务员, 主导多个百亿级城市基建项目", 
+      "清华大学水利系本硕", "国家数学建模一等奖获得者"
+    ],
     socialNetworks: [
       {
         name: "LinkedIn",
@@ -54,30 +63,19 @@ const teamList: TeamProps[] = [
     ],
   },
   {
-    imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3",
-    firstName: "王",
-    lastName: "总监",
-    positions: ["产品总监", "企业服务专家"],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/",
-      },
+    imageUrl: "",
+    firstName: "",
+    lastName: "姚灿武",
+    positions: [
+      "联合创始人 & CTO", 
+      '前腾讯、Rancher / SUSE 高级工程师',
+      '曾就职华为、大疆等公司',
+      '主导大规模容器云平台与网络核心系统',
     ],
-  },
-  {
-    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3",
-    firstName: "刘",
-    lastName: "架构师",
-    positions: ["技术架构师", "系统设计专家"],
     socialNetworks: [
       {
         name: "LinkedIn",
         url: "https://www.linkedin.com/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/",
       },
     ],
   },
@@ -111,7 +109,7 @@ const socialIcon = (socialName: string) => {
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8"
     >
       <Card
         v-for="{
@@ -125,16 +123,16 @@ const socialIcon = (socialName: string) => {
         class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden group/hoverimg"
       >
         <CardHeader class="p-0 gap-0">
-          <div class="h-full overflow-hidden">
+          <!-- <div class="h-full overflow-hidden">
             <img
               :src="imageUrl"
               alt=""
               class="w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]"
             />
-          </div>
-          <CardTitle class="py-6 pb-4 px-6"
-            >{{ firstName }}
+          </div> -->
+          <CardTitle class="py-6 pb-4 px-6">
             <span class="text-primary">{{ lastName }}</span>
+            {{ firstName }}
           </CardTitle>
         </CardHeader>
 
@@ -146,10 +144,11 @@ const socialIcon = (socialName: string) => {
             'pb-4': index === positions.length - 1,
           }"
         >
-          {{ position }}<span v-if="index < positions.length - 1">,</span>
+          {{ position }}          
+          <span v-if="index < positions.length - 1">,</span>
         </CardContent>
 
-        <CardFooter class="space-x-4 mt-auto">
+        <!-- <CardFooter class="space-x-4 mt-auto">
           <a
             v-for="{ name, url } in socialNetworks"
             key="name"
@@ -160,7 +159,7 @@ const socialIcon = (socialName: string) => {
           >
             <component :is="socialIcon(name)" />
           </a>
-        </CardFooter>
+        </CardFooter> -->
       </Card>
     </div>
   </section>

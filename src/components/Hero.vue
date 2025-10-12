@@ -31,7 +31,9 @@ import { ArrowRight } from "lucide-vue-next";
               class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
               >ArcherSmart.AI
             </span>
-            让企业知识真正流动
+            <div class="text-2xl md:text-3xl font-bold mt-2">
+              让企业知识真正流动, 释放数据的生产力
+            </div>
           </h1>
         </div>
 
