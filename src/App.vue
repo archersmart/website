@@ -26,10 +26,10 @@ import Product from "./components/Product.vue";
   <Services />
   <!-- <HowItWorks /> -->
   <!-- <Testimonials /> -->
-  <Team />
+  <!-- <Team /> -->
   <!-- <Community /> -->
   <!-- <Pricing /> -->
-  <Contact />
+  <!-- <Contact /> -->
   <!-- <FAQ /> -->
   <Footer />
 </template>

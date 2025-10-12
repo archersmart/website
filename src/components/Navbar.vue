@@ -45,7 +45,7 @@ const { t, locale } = useI18n();
 
 const routeList = computed<RouteProps[]>(() => [
   // { href: "#testimonials", label: t("nav.testimonials") },
-  { href: "#team", label: t("nav.team") },
+  // { href: "#team", label: t("nav.team") },
   { href: "#contact", label: t("nav.contact") },
   // { href: "#faq", label: t("nav.faq") },
 ]);
@@ -53,19 +53,17 @@ const routeList = computed<RouteProps[]>(() => [
 const productList: FeatureProps[] = [
   {
     title: "AI Infra(LLMOS)",
-    description: "Highlight how your product solves user problems.",
+    description: "基于1Block.ai的AI基础设施, 提供一站式AI解决方案.",
     key: 'aiInfra',
   },
   {
     title: "ArcherSmart Search",
-    description:
-      "Leverages social proof elements to establish trust and credibility.",
+    description: "企业级智能搜索引擎",
     key: 'search',
   },
   {
     title: "ArcherSmart Agent(APS)",
-    description:
-      "Make your lead capture form visually appealing and strategically.",
+    description: "AI驱动核心资源决策, 优化生产线调度和库存",
     key: 'agent',
   },
 ];
