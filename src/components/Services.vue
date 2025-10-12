@@ -21,25 +21,25 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Custom Domain Integration",
+    title: "知识管理",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit adipisicing.",
+      "统一管理企业文档、邮件、会议记录等各类知识资产，构建企业知识库。",
     pro: 0,
   },
   {
-    title: "Social Media Integrations",
+    title: "智能搜索",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, dicta.",
+      "基于语义理解的智能搜索，快速定位所需信息，提升工作效率。",
     pro: 0,
   },
   {
-    title: "Email Marketing Integrations",
-    description: "Lorem dolor sit amet adipisicing.",
-    pro: 0,
+    title: "AI助手",
+    description: "智能问答助手，基于企业知识提供准确回答和建议。",
+    pro: 1,
   },
   {
-    title: "SEO Optimization",
-    description: "Lorem ipsum dolor sit amet consectetur.",
+    title: "数据分析",
+    description: "深度分析知识使用情况，优化知识结构和流程。",
     pro: 1,
   },
 ];
@@ -51,15 +51,15 @@ const serviceList: ServiceProps[] = [
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Services
+      应用场景
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Grow Your Business
+      全场景智能化解决方案
     </h2>
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      From marketing and sales to operations and strategy, we have the expertise
-      to help you achieve your goals.
+      从知识管理到智能搜索，从AI助手到数据分析，
+      ArcherSmart 为企业提供全方位的智能化服务。
     </h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
 

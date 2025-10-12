@@ -21,39 +21,39 @@ interface FeaturesProps {
 const featureList: FeaturesProps[] = [
   {
     icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    title: "企业第二大脑",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "沉淀组织知识，避免陷入'信息泥潭'，让企业知识真正流动起来。",
   },
   {
     icon: "badgeCheck",
-    title: "Social Proof",
+    title: "CoPilot 智能体",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "不仅能搜索，还能构建Agent代理，执行实际任务，提升工作效率。",
   },
   {
     icon: "goal",
-    title: "Targeted Content",
+    title: "跨应用搜索",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "打破信息孤岛，MCP接入企业应用和工具，实现统一搜索体验。",
   },
   {
     icon: "pictureInPicture",
-    title: "Strong Visuals",
+    title: "自然语言交互",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "像与人对话一样提问，精准理解用户意图，提供智能化回答。",
   },
   {
     icon: "mousePointerClick",
-    title: "Clear CTA",
+    title: "语义级理解",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "基于 Embedding 技术，真正理解员工'指的是什么'，提供精准搜索结果。",
   },
   {
     icon: "newspaper",
-    title: "Clear Headline",
+    title: "企业级权限保障",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "复杂组织架构下，确保数据访问合规、可控、安全，保护企业核心资产。",
   },
 ];
 
@@ -85,17 +85,15 @@ const iconMap: Record<
     class="container py-24 sm:py-32"
   >
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Features
+      核心功能
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      为什么选择 ArcherSmart
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

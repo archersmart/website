@@ -18,27 +18,25 @@ import { ArrowRight } from "lucide-vue-next";
           class="text-sm py-2"
         >
           <span class="mr-2 text-primary">
-            <Badge>New</Badge>
+            <Badge>AI</Badge>
           </span>
-          <span> Design is out now! </span>
+          <span> 企业级智能搜索引擎 </span>
         </Badge>
 
         <div
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
-            Experience the
             <span
               class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
-              >Shadcn/Vue
+              >ArcherSmart.AI
             </span>
-            landing page
+            让企业知识真正流动
           </h1>
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          We're more than just a tool, we're a community of passionate creators.
-          Get access to exclusive resources, tutorials, and support.
+          释放数据的生产力，一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手。
         </p>
 
         <div class="space-y-4 md:space-y-0 md:space-x-4">

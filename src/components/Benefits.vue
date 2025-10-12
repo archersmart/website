@@ -19,27 +19,27 @@ interface BenefitsProps {
 const benefitList: BenefitsProps[] = [
   {
     icon: "blocks",
-    title: "Build Brand Trust",
+    title: "搜索效率提升4倍",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "日均查询 14 次，文档查找时间显著缩短，让员工专注于核心业务。",
   },
   {
     icon: "lineChart",
-    title: "More Leads",
+    title: "活跃度显著领先",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "月活率达 40%，远超行业平均水平（2-3倍），用户粘性极高。",
   },
   {
     icon: "wallet",
-    title: "Higher Conversions",
+    title: "业务价值可量化",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "提升知识利用率，直接转化为人效提升与收入增长，ROI清晰可见。",
   },
   {
     icon: "sparkle",
-    title: "Test Marketing Ideas",
+    title: "准确率高达 98%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "结合知识图谱与语义搜索，极大提升查询准确率，减少信息噪音。",
   },
 ];
 
@@ -68,15 +68,14 @@ const iconMap: Record<
   >
     <div class="grid lg:grid-cols-2 place-items-center lg:gap-24">
       <div>
-        <h2 class="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+        <h2 class="text-lg text-primary mb-2 tracking-wider">客户价值</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Your Shortcut to Success
+          客户价值与反馈
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non ducimus
-          reprehenderit architecto rerum similique facere odit deleniti
-          necessitatibus quo quae.
+          通过实际部署验证，ArcherSmart 为企业带来显著的效率提升和业务价值，
+          获得客户一致好评和持续使用。
         </p>
       </div>
 

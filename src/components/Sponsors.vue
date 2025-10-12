@@ -20,31 +20,51 @@ interface sponsorsProps {
 const sponsors: sponsorsProps[] = [
   {
     icon: "crown",
-    name: "Acmebrand",
+    name: "八马茶业",
   },
   {
     icon: "vegan",
-    name: "Acmelogo",
+    name: "IGARASHI",
   },
   {
     icon: "ghost",
-    name: "Acmesponsor",
+    name: "九牧",
   },
   {
     icon: "puzzle",
-    name: "Acmeipsum",
+    name: "大洋",
   },
   {
     icon: "squirrel",
-    name: "Acme",
+    name: "斯蒂尔",
   },
   {
     icon: "cookie",
-    name: "Accmee",
+    name: "安踏",
   },
   {
     icon: "drama",
-    name: "Acmetech",
+    name: "蕉下",
+  },
+  {
+    icon: "drama",
+    name: "盛弘股份",
+  },
+  {
+    icon: "drama",
+    name: "星巴克",
+  },
+  {
+    icon: "drama",
+    name: "沃尔玛",
+  },
+  {
+    icon: "drama",
+    name: "宝马",
+  },
+  {
+    icon: "drama",
+    name: "施耐德电气",
   },
 ];
 
@@ -73,7 +93,9 @@ const iconMap: Record<
     id="sponsors"
     class="max-w-[75%] mx-auto pb-24 sm:pb-32"
   >
-    <h2 class="text-lg md:text-xl text-center mb-6">Our Platinum Sponsors</h2>
+    <h2 class="text-lg md:text-xl text-center mb-6">
+      合作客户
+    </h2>
 
     <div class="mx-auto">
       <Marquee
