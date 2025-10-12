@@ -134,7 +134,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
     <!-- 主体内容 -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
       <!-- 左侧：描述与功能列表 -->
-      <Card class="bg-background border">
+      <Card class="bg-background border border-primary/20">
         <CardHeader>
           <CardTitle>
             <div class="space-y-1">
@@ -188,7 +188,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
           <CarouselContent>
             <CarouselItem v-for="(img, idx) in activeScreens" :key="idx">
               <div
-                class="w-full h-[18rem] md:h-[22rem] lg:h-[26rem] rounded-xl border bg-background/70 overflow-hidden flex items-center justify-center"
+                class="w-full h-[18rem] md:h-[22rem] lg:h-[26rem] rounded-xl border border-primary/30 bg-background/70 overflow-hidden flex items-center justify-center"
               >
                 <img
                   :src="img"
