@@ -92,16 +92,12 @@ import ai3 from "@/assets/product/aiInfra/img_3.png";
 import s1 from "@/assets/product/search/img_1.png";
 
 // ArcherSmart Agent (APS)
-import ag1 from "@/assets/product/agent/img_1.png";
-import ag2 from "@/assets/product/agent/img_2.png";
-import ag3 from "@/assets/product/agent/img_3.png";
-import ag4 from "@/assets/product/agent/img_4.png";
 import ag5 from "@/assets/product/agent/img_5.png";
 
 const screenshots: Record<ProductKey, string[]> = {
   aiInfra: [ai1, ai2, ai3],
   search: [s1],
-  agent: [ag1, ag2, ag3, ag4, ag5],
+  agent: [ag5],
 };
 
 const activeScreens = computed(() => screenshots[activeKey.value] ?? []);

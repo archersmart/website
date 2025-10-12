@@ -42,43 +42,6 @@ const teamList: TeamProps[] = [
       },
     ],
   },
-  {
-    imageUrl: "",
-    firstName: "",
-    lastName: "刘燕",
-    positions: [
-      "联合创始人 & COO", 
-      "前新加坡高级公务员, 主导多个百亿级城市基建项目", 
-      "清华大学水利系本硕", "国家数学建模一等奖获得者"
-    ],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/",
-      },
-      {
-        name: "Github",
-        url: "https://github.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "",
-    firstName: "",
-    lastName: "姚灿武",
-    positions: [
-      "联合创始人 & CTO", 
-      '前腾讯、Rancher / SUSE 高级工程师',
-      '曾就职华为、大疆等公司',
-      '主导大规模容器云平台与网络核心系统',
-    ],
-    socialNetworks: [
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/",
-      },
-    ],
-  },
 ];
 
 const socialIcon = (socialName: string) => {
