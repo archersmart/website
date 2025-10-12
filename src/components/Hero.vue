@@ -20,7 +20,7 @@ import { ArrowRight } from "lucide-vue-next";
           <span class="mr-2 text-primary">
             <Badge>AI</Badge>
           </span>
-          <span> 企业级智能搜索引擎 </span>
+          <span> 线下零售与智能生产的AI引擎 </span>
         </Badge>
 
         <div
@@ -41,7 +41,7 @@ import { ArrowRight } from "lucide-vue-next";
           释放数据的生产力，一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手。
         </p>
 
-        <div class="space-y-4 md:space-y-0 md:space-x-4">
+        <!-- <div class="space-y-4 md:space-y-0 md:space-x-4">
           <Button class="w-5/6 md:w-1/4 font-bold group/arrow">
             Get Started
             <ArrowRight
@@ -55,12 +55,13 @@ import { ArrowRight } from "lucide-vue-next";
             class="w-5/6 md:w-1/4 font-bold"
           >
             <a
-              href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
+              href="https://github.com/archersmart"
               target="_blank"
-              >Github respository</a
-            >
+              >
+                Github respository
+            </a>
           </Button>
-        </div>
+        </div> -->
       </div>
 
       <div class="relative group mt-14">
@@ -69,13 +70,13 @@ import { ArrowRight } from "lucide-vue-next";
           class="absolute -top-6 right-12 w-[90%] h-12 lg:h-[80%] bg-primary/50 blur-3xl rounded-full img-shadow-animation"
         ></div>
 
-        <img
+        <!-- <img
           class="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-t-primary/30 img-border-animation"
           :src="
             mode == 'light' ? 'hero-image-light.jpg' : 'hero-image-dark.jpg'
           "
           alt="dashboard using shadcn-vue"
-        />
+        /> -->
 
         <!-- gradient effect img -->
         <div
