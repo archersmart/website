@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
@@ -25,9 +26,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { ChevronsDown, Menu } from "lucide-vue-next";
+import { ChevronsDown, Menu, Languages } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
 import ToggleTheme from "./ToggleTheme.vue";
+import { setLocale } from "@/i18n";
 
 interface RouteProps {
   href: string;
@@ -39,24 +41,14 @@ interface FeatureProps {
   description: string;
 }
 
-const routeList: RouteProps[] = [
-  // {
-  //   href: "#testimonials",
-  //   label: "Testimonials",
-  // },
-  {
-    href: "#team",
-    label: "Team",
-  },
-  {
-    href: "#contact",
-    label: "Contact",
-  },
-  // {
-  //   href: "#faq",
-  //   label: "FAQ",
-  // },
-];
+const { t, locale } = useI18n();
+
+const routeList = computed<RouteProps[]>(() => [
+  // { href: "#testimonials", label: t("nav.testimonials") },
+  { href: "#team", label: t("nav.team") },
+  { href: "#contact", label: t("nav.contact") },
+  // { href: "#faq", label: t("nav.faq") },
+]);
 
 const productList: FeatureProps[] = [
   {
@@ -79,6 +71,11 @@ const productList: FeatureProps[] = [
 ];
 
 const isOpen = ref<boolean>(false);
+
+const toggleLang = () => {
+  setLocale(locale.value === "zh" ? "en" : "zh");
+};
+const langCode = computed(() => (locale.value === "zh" ? "ZH" : "EN"));
 
 const onClickProduct = (key: string) => {
   if (key === 'aiInfra') {
@@ -136,7 +133,7 @@ const onClickProduct = (key: string) => {
             <div class="flex flex-col gap-2">
               <Button
                 v-for="{ href, label } in routeList"
-                :key="label"
+                :key="href"
                 as-child
                 variant="ghost"
                 class="justify-start text-base"
@@ -155,6 +152,18 @@ const onClickProduct = (key: string) => {
             <Separator class="mb-2" />
 
             <ToggleTheme />
+
+            <Button
+              size="sm"
+              variant="ghost"
+              class="w-full justify-start mt-1"
+              aria-label="Toggle Language"
+              @click="toggleLang"
+            >
+              <Languages class="size-5" />
+              <span class="ml-2">{{ langCode }}</span>
+              <span class="sr-only">Toggle language</span>
+            </Button>
           </SheetFooter>
         </SheetContent>
       </Sheet>
@@ -165,7 +174,7 @@ const onClickProduct = (key: string) => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger class="bg-card text-base">
-            产品
+            {{ t("nav.products") }}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <div class="grid w-[400px] grid-cols-1 gap-5 p-4">
@@ -197,7 +206,7 @@ const onClickProduct = (key: string) => {
           <NavigationMenuLink asChild>
             <Button
               v-for="{ href, label } in routeList"
-              :key="label"
+              :key="href"
               as-child
               variant="ghost"
               class="justify-start text-base"
@@ -213,6 +222,18 @@ const onClickProduct = (key: string) => {
 
     <div class="hidden lg:flex">
       <ToggleTheme />
+
+      <Button
+        size="sm"
+        variant="ghost"
+        aria-label="Toggle Language"
+        @click="toggleLang"
+        class="ml-1"
+      >
+        <Languages class="size-5" />
+        <span class="ml-2">{{ langCode }}</span>
+        <span class="sr-only">Toggle language</span>
+      </Button>
 
       <Button
         as-child
