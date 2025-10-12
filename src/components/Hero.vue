@@ -28,7 +28,7 @@ import { ArrowRight } from "lucide-vue-next";
         >
           <h1>
             <span
-              class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
+              class="text-transparent bg-gradient-to-r from-primary/40 to-primary bg-clip-text"
               >ArcherSmart.AI
             </span>
             <div class="text-2xl md:text-3xl font-bold mt-2">

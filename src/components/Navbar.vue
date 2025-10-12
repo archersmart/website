@@ -40,10 +40,10 @@ interface FeatureProps {
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
+  // {
+  //   href: "#testimonials",
+  //   label: "Testimonials",
+  // },
   {
     href: "#team",
     label: "Team",
@@ -52,30 +52,39 @@ const routeList: RouteProps[] = [
     href: "#contact",
     label: "Contact",
   },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+  // {
+  //   href: "#faq",
+  //   label: "FAQ",
+  // },
 ];
 
-const featureList: FeatureProps[] = [
+const productList: FeatureProps[] = [
   {
     title: "AI Infra(LLMOS)",
     description: "Highlight how your product solves user problems.",
+    key: 'aiInfra',
   },
   {
     title: "ArcherSmart Search",
     description:
       "Leverages social proof elements to establish trust and credibility.",
+    key: 'search',
   },
   {
     title: "ArcherSmart Agent(APS)",
     description:
       "Make your lead capture form visually appealing and strategically.",
+    key: 'agent',
   },
 ];
 
 const isOpen = ref<boolean>(false);
+
+const onClickProduct = (key: string) => {
+  if (key === 'aiInfra') {
+    window.open('https://1block.ai/', '_blank');
+  }
+};
 </script>
 
 <template>
@@ -167,9 +176,10 @@ const isOpen = ref<boolean>(false);
               /> -->
               <ul class="flex flex-col gap-2">
                 <li
-                  v-for="{ title, description } in featureList"
-                  :key="title"
-                  class="rounded-md p-3 text-sm hover:bg-muted"
+                  v-for="{ title, description, key } in productList"
+                  :key="key"
+                  class="rounded-md p-3 text-sm hover:bg-muted cursor-pointer"
+                  @click="onClickProduct(key)"
                 >
                   <p class="mb-1 font-semibold leading-none text-foreground">
                     {{ title }}

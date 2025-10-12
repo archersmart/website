@@ -31,7 +31,7 @@ import DiscordIcon from "@/icons/DiscordIcon.vue";
               />
               Ready to join this
               <span
-                class="text-transparent bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text"
+                class="text-transparent bg-gradient-to-r from-primary/40 to-primary bg-clip-text"
               >
                 Community?
               </span>
