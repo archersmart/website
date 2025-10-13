@@ -106,7 +106,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 <template>
   <section id="product" class="container py-8 sm:py-4">
     <!-- 标题区域 -->
-    <div class="text-center mb-8 bg-white dark:bg-background rounded-xl py-6">
+    <div class="text-center mb-8 rounded-xl py-6">
       <h2 class="text-lg text-primary tracking-wider mb-2">产品</h2>
       <h3 class="text-3xl md:text-4xl font-bold text-sky-900 dark:text-foreground">
         ArcherSmart 产品矩阵
@@ -117,11 +117,11 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
     </div>
 
     <!-- 切换选项 -->
-    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-8">
+    <div class="flex flex-wrap justify-start gap-2 md:gap-3">
       <Button
         v-for="p in products"
         :key="p.key"
-        :variant="activeKey === p.key ? 'brand' : 'brand-outline'"
+        :variant="activeKey === p.key ? 'default' : 'outline'"
         class="px-4 py-2"
         @click="setActive(p.key)"
       >
@@ -130,7 +130,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
     </div>
 
     <!-- 主体内容：浅蓝羽化背景 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start bg-gradient-to-b from-sky-50/90 to-transparent rounded-2xl py-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start rounded-2xl py-6">
       <!-- 左侧：描述与功能列表 -->
       <Card class="bg-background border border-primary/20 hover:bg-brand-gradient/5 hover:border-brand-from/30 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
         <CardHeader>
@@ -168,9 +168,9 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 
           <!-- 交互按钮 -->
           <div class="flex gap-3 pt-2">
-            <Button variant="brand" class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
+            <Button variant="" class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
             <Button 
-              variant="brand-outline" 
+              variant="" 
               class="px-4"
               @click="onOpenDocument(active.key)"
             >

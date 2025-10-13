@@ -106,66 +106,72 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Navbar />
-  <div
-    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
-  >
-    <Hero />
-  </div>
-  <!-- 滚动强调区块：Product -->
-  <div
-    ref="productEl"
-    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
-    :class="getClasses('product')"
-    :style="{ transform: `scale(${getScale('product')})` }"
-  >
-    <Product />
-  </div>
-  <!-- 滚动强调区块：Sponsors -->
-  <div
-    ref="sponsorsEl"
-    class="bg-white dark:bg-background"
-    :class="getClasses('sponsors')"
-    :style="{ transform: `scale(${getScale('sponsors')})` }"
-  >
-    <Sponsors />
-  </div>
+  <div class="from-sky-blue-500/90 to-transparent">
+    <Navbar />
+    <div
+      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900 -mt-20 pt-40 pb-40"
+    >
+      <Hero />
+    </div>
+    <!-- 滚动强调区块：Product -->
 
-  <div
-    ref="benefitsEl"
-    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
-    :class="getClasses('benefits')"
-    :style="{ transform: `scale(${getScale('benefits')})` }"
-  >
-    <Benefits />
-  </div>
+    <!-- 滚动强调区块：Sponsors -->
+    <div
+      ref="sponsorsEl"
+      class="bg-white dark:bg-background"
+      :class="getClasses('sponsors')"
+      :style="{ transform: `scale(${getScale('sponsors')})` }"
+    >
+      <Sponsors />
+    </div>
 
-  <div
-    ref="featuresEl"
-    class="bg-white dark:bg-background"
-    :class="getClasses('features')"
-    :style="{ transform: `scale(${getScale('features')})` }"
-  >
-    <Features />
-  </div>
+    <div
+      ref="productEl"
+      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
+      :class="getClasses('product')"
+      :style="{ transform: `scale(${getScale('product')})` }"
+    >
+      <Product />
+    </div>
 
-  <!-- 滚动强调区块：Services -->
-  <div
-    ref="servicesEl"
-    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
-    :class="getClasses('services')"
-    :style="{ transform: `scale(${getScale('services')})` }"
-  >
-    <Services />
+    <div
+      ref="benefitsEl"
+      class="bg-white dark:bg-background"
+      :class="getClasses('benefits')"
+      :style="{ transform: `scale(${getScale('benefits')})` }"
+    >
+      <Benefits />
+    </div>
+
+    <div
+      ref="servicesEl"
+      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
+      :class="getClasses('services')"
+      :style="{ transform: `scale(${getScale('services')})` }"
+    >
+      <Services />
+    </div>
+
+    <div
+      ref="featuresEl"
+      class="bg-white dark:bg-background"
+      :class="getClasses('features')"
+      :style="{ transform: `scale(${getScale('features')})` }"
+    >
+      <Features />
+    </div>
+
+    <!-- 滚动强调区块：Services -->
+
+    <!-- <HowItWorks /> -->
+    <!-- <Testimonials /> -->
+    <!-- <Team /> -->
+    <!-- <Community /> -->
+    <!-- <Pricing /> -->
+    <!-- <Contact /> -->
+    <!-- <FAQ /> -->
+    <Footer />
   </div>
-  <!-- <HowItWorks /> -->
-  <!-- <Testimonials /> -->
-  <!-- <Team /> -->
-  <!-- <Community /> -->
-  <!-- <Pricing /> -->
-  <!-- <Contact /> -->
-  <!-- <FAQ /> -->
-  <Footer />
 </template>
 
 <style scoped>

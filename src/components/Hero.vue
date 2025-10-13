@@ -52,27 +52,27 @@ onUnmounted(() => {
       class="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto pt-32 pb-8 md:pt-32 pb-8"
     >
       <div class="text-center space-y-8">
-        <Badge
+        <!-- <Badge
           variant="outline"
           class="text-sm py-2"
         >
           <span class="mr-2 text-primary">
             <Badge>AI</Badge>
           </span>
-          <span> 线下零售与智能生产的AI引擎 </span>
-        </Badge>
+          <span>  </span>
+        </Badge> -->
 
         <div
           class="max-w-screen-md mx-auto text-center text-5xl md:text-6xl font-bold"
         >
           <h1>
             <span
-              class="tracking-widest font-[Open_Sans] text-8xl text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-500 to-royal-blue-500 animate-gradient-x [background-size:200%_200%]"
+              class="tracking-widest font-[Open_Sans] text-8xl text-sky-blue-950"
             >
               ArcherSmart.AI
             </span>
             <div class="text-2xl md:text-3xl font-bold mt-2">
-              让企业知识真正流动, 释放数据的生产力
+              线下零售与智能生产的AI引擎
             </div>
           </h1>
         </div>
