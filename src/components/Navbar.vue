@@ -95,7 +95,7 @@ const onClickProduct = (key: string) => {
       class="font-bold text-lg flex items-center"
     >
       <ChevronsDown
-        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white"
+        class="bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white animate-float animate-glow"
       />
       ArcherSmart.AI
     </a>

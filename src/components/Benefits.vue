@@ -83,25 +83,27 @@ const iconMap: Record<
         <Card
           v-for="({ icon, title, description }, index) in benefitList"
           :key="title"
-          class="bg-muted/50 dark:bg-card hover:bg-background dark:hover:bg-background transition-all delay-75 group/number"
+          class="relative overflow-hidden rounded-2xl bg-background/60 dark:bg-card/60 backdrop-blur-md border border-border/40 hover:bg-brand-gradient/10 hover:border-brand-from/40 hover:shadow-xl transition-all duration-300 ease-out transform hover:-translate-y-0.5 group group/number"
         >
-          <CardHeader>
-            <div class="flex justify-between">
-              <component
-                class="size-8 mb-6 text-primary"
-                :is="iconMap[icon]"
-              />
+          <CardHeader class="p-6 pb-4">
+            <div class="flex justify-between items-start">
+              <div class="bg-brand-gradient p-2 rounded-xl ring-8 ring-brand-from/15 mb-4 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:animate-glow">
+                <component
+                  :is="iconMap[icon]"
+                  class="size-6 text-white"
+                />
+              </div>
 
               <span
-                class="text-5xl text-muted-foreground/15 font-medium transition-all delay-75 group-hover/number:text-muted-foreground/30"
+                class="text-5xl text-muted-foreground/15 font-semibold transition-all duration-300 group-hover/number:text-muted-foreground/30"
                 >0{{ index + 1 }}</span
               >
             </div>
 
-            <CardTitle>{{ title }}</CardTitle>
+            <CardTitle class="text-xl md:text-2xl tracking-tight">{{ title }}</CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground">
+          <CardContent class="text-muted-foreground leading-relaxed text-sm md:text-base px-6 pt-0 pb-6">
             {{ description }}
           </CardContent>
         </Card>

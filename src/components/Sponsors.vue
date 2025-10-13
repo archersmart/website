@@ -78,7 +78,7 @@ const sponsors: sponsorsProps[] = [
     id="sponsors"
     class="max-w-[75%] mx-auto pb-24 sm:pb-32"
   >
-    <h2 class="text-lg md:text-xl text-center mb-16">
+    <h2 class="text-lg md:text-xl text-center mb-16 text-primary">
       Trusted By
     </h2>
 

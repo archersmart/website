@@ -77,6 +77,26 @@ const iconMap: Record<
   messageCircle: MessageCircle,
   newspaper: Newspaper,
 };
+
+// 细微视差滚动指令，作用于外层包裹以避免与 hover transform 冲突
+const vParallax = {
+  mounted(el: HTMLElement, binding: any) {
+    const speed = (binding?.value && binding.value.speed) || 0.06;
+    const handler = () => {
+      const rect = el.getBoundingClientRect();
+      const offset = rect.top - window.innerHeight / 2;
+      el.style.transform = `translateY(${offset * speed}px)`;
+    };
+    handler();
+    window.addEventListener("scroll", handler, { passive: true });
+    // @ts-ignore
+    el.__parallaxHandler = handler;
+  },
+  unmounted(el: any) {
+    const handler = el.__parallaxHandler;
+    if (handler) window.removeEventListener("scroll", handler);
+  },
+};
 </script>
 
 <template>
@@ -100,19 +120,21 @@ const iconMap: Record<
       <div
         v-for="{ icon, title, description } in featureList"
         :key="title"
+        v-parallax="{ speed: 0.06 }"
+        class="will-change-transform"
       >
-        <Card class="h-full bg-background border-0 shadow-none">
+        <Card class="h-full bg-background/70 dark:bg-card/70 backdrop-blur-sm border border-border/60 shadow-sm rounded-2xl transition-all duration-300 ease-out transform will-change-transform hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-brand-gradient/10 hover:border-brand-from/30 hover:shadow-lg group animate-fade-up">
           <CardHeader class="flex justify-center items-center">
             <div
-              class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4"
+              class="bg-primary/15 p-2 rounded-full ring-8 ring-primary/10 mb-4 transition-all duration-300 group-hover:bg-brand-gradient group-hover:ring-brand-from/30 [background-size:200%_200%] group-hover:animate-gradient-flow animate-float"
             >
               <component
                 :is="iconMap[icon]"
-                class="size-6 text-primary"
+                class="size-6 text-primary group-hover:text-white transition-colors duration-300 drop-shadow-sm"
               />
             </div>
 
-            <CardTitle>
+            <CardTitle class="tracking-tight">
               {{ title }}
             </CardTitle>
           </CardHeader>

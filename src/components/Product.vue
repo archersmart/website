@@ -119,7 +119,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
       <Button
         v-for="p in products"
         :key="p.key"
-        :variant="activeKey === p.key ? 'default' : 'outline'"
+        :variant="activeKey === p.key ? 'brand' : 'brand-outline'"
         class="px-4 py-2"
         @click="setActive(p.key)"
       >
@@ -130,7 +130,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
     <!-- 主体内容 -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
       <!-- 左侧：描述与功能列表 -->
-      <Card class="bg-background border border-primary/20">
+      <Card class="bg-background border border-primary/20 hover:bg-brand-gradient/5 hover:border-brand-from/30 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
         <CardHeader>
           <CardTitle>
             <div class="space-y-1">
@@ -166,9 +166,9 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 
           <!-- 交互按钮 -->
           <div class="flex gap-3 pt-2">
-            <Button class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
+            <Button variant="brand" class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
             <Button 
-              variant="outline" 
+              variant="brand-outline" 
               class="px-4"
               @click="onOpenDocument(active.key)"
             >

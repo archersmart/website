@@ -43,6 +43,26 @@ const serviceList: ServiceProps[] = [
     pro: 0,
   },
 ];
+
+// 细微视差滚动指令，避免与 hover transform 冲突，应用于外层包裹
+const vParallax = {
+  mounted(el: HTMLElement, binding: any) {
+    const speed = (binding?.value && binding.value.speed) || 0.05;
+    const handler = () => {
+      const rect = el.getBoundingClientRect();
+      const offset = rect.top - window.innerHeight / 2;
+      el.style.transform = `translateY(${offset * speed}px)`;
+    };
+    handler();
+    window.addEventListener("scroll", handler, { passive: true });
+    // @ts-ignore
+    el.__parallaxHandler = handler;
+  },
+  unmounted(el: any) {
+    const handler = el.__parallaxHandler;
+    if (handler) window.removeEventListener("scroll", handler);
+  },
+};
 </script>
 
 <template>
@@ -69,16 +89,18 @@ const serviceList: ServiceProps[] = [
       <div
         v-for="{ title, description, pro } in serviceList"
         :key="title"
+        v-parallax="{ speed: 0.05 }"
+        class="will-change-transform"
       >
-        <Card class="bg-muted/60 dark:bg-card h-full relative">
-          <CardHeader>
-            <CardTitle>{{ title }}</CardTitle>
-            <CardDescription>{{ description }}</CardDescription>
+        <Card class="bg-background/70 dark:bg-card/70 backdrop-blur-sm h-full relative border border-border/60 shadow-sm rounded-2xl transition-all duration-400 ease-out transform will-change-transform hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-brand-gradient/10 hover:border-brand-from/30 hover:shadow-lg animate-fade-up">
+          <CardHeader class="relative">
+            <CardTitle class="tracking-tight">{{ title }}</CardTitle>
+            <CardDescription class="mt-1 text-muted-foreground">{{ description }}</CardDescription>
           </CardHeader>
           <Badge
             v-if="pro === ProService.YES"
             variant="secondary"
-            class="absolute -top-2 -right-3"
+            class="absolute -top-2 -right-3 shadow-sm"
             >PRO</Badge
           >
         </Card>

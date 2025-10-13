@@ -5,6 +5,45 @@ const mode = useColorMode();
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-vue-next";
+import { ref, onMounted, onUnmounted } from "vue";
+
+// 打字机动画配置与状态
+const fullText =
+  "释放数据的生产力，一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手。";
+const displayedText = ref("");
+const isTyping = ref(true);
+// 可调动画速度（毫秒/字符），适配不同屏幕也可按需调整
+const typingSpeed = 70;
+let typingTimer: number | null = null;
+
+onMounted(() => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    displayedText.value = fullText;
+    isTyping.value = false;
+    return;
+  }
+
+  let idx = 0;
+  typingTimer = window.setInterval(() => {
+    displayedText.value += fullText.charAt(idx);
+    idx += 1;
+    if (idx >= fullText.length) {
+      isTyping.value = false; // 完整显示后停止动画（隐藏光标）
+      if (typingTimer) {
+        clearInterval(typingTimer);
+        typingTimer = null;
+      }
+    }
+  }, typingSpeed);
+});
+
+onUnmounted(() => {
+  if (typingTimer) clearInterval(typingTimer);
+});
 </script>
 
 <template>
@@ -28,7 +67,7 @@ import { ArrowRight } from "lucide-vue-next";
         >
           <h1>
             <span
-              class="text-transparent bg-gradient-to-r from-primary/40 to-primary bg-clip-text"
+              class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-500 to-royal-blue-500 animate-gradient-x [background-size:200%_200%]"
               >ArcherSmart.AI
             </span>
             <div class="text-2xl md:text-3xl font-bold mt-2">
@@ -38,7 +77,8 @@ import { ArrowRight } from "lucide-vue-next";
         </div>
 
         <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-          释放数据的生产力，一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手。
+          <span>{{ displayedText }}</span>
+          <span v-if="isTyping" aria-hidden="true" class="typewriter-cursor align-baseline"></span>
         </p>
 
         <!-- <div class="space-y-4 md:space-y-0 md:space-x-4">
@@ -123,5 +163,21 @@ import { ArrowRight } from "lucide-vue-next";
   to {
     @apply border-t-primary/60;
   }
+}
+
+/* 打字机光标闪烁效果 */
+.typewriter-cursor {
+  display: inline-block;
+  width: 1ch;
+  height: 1em;
+  margin-left: 2px;
+  border-right: 2px solid currentColor;
+  vertical-align: baseline;
+  animation: cursor-blink 1s steps(1, end) infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 </style>

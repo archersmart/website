@@ -16,6 +16,8 @@ export const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        brand: "bg-brand-gradient text-white hover:bg-brand-gradient-hover transition-all duration-300 transform hover:scale-105 hover:shadow-lg",
+        "brand-outline": "border-2 border-brand-from bg-transparent text-brand-from hover:bg-brand-gradient hover:text-white transition-all duration-300 transform hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",
