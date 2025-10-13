@@ -107,10 +107,15 @@ onUnmounted(() => {
 
 <template>
   <Navbar />
-  <Hero />
+  <div
+    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
+  >
+    <Hero />
+  </div>
   <!-- 滚动强调区块：Product -->
   <div
     ref="productEl"
+    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
     :class="getClasses('product')"
     :style="{ transform: `scale(${getScale('product')})` }"
   >
@@ -119,6 +124,7 @@ onUnmounted(() => {
   <!-- 滚动强调区块：Sponsors -->
   <div
     ref="sponsorsEl"
+    class="bg-white dark:bg-background"
     :class="getClasses('sponsors')"
     :style="{ transform: `scale(${getScale('sponsors')})` }"
   >
@@ -127,6 +133,7 @@ onUnmounted(() => {
 
   <div
     ref="benefitsEl"
+    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
     :class="getClasses('benefits')"
     :style="{ transform: `scale(${getScale('benefits')})` }"
   >
@@ -135,6 +142,7 @@ onUnmounted(() => {
 
   <div
     ref="featuresEl"
+    class="bg-white dark:bg-background"
     :class="getClasses('features')"
     :style="{ transform: `scale(${getScale('features')})` }"
   >
@@ -144,6 +152,7 @@ onUnmounted(() => {
   <!-- 滚动强调区块：Services -->
   <div
     ref="servicesEl"
+    class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
     :class="getClasses('services')"
     :style="{ transform: `scale(${getScale('services')})` }"
   >

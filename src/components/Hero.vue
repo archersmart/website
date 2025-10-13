@@ -67,8 +67,9 @@ onUnmounted(() => {
         >
           <h1>
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-500 to-royal-blue-500 animate-gradient-x [background-size:200%_200%]"
-              >ArcherSmart.AI
+              class="tracking-widest font-[Open_Sans] text-8xl text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-violet-500 to-royal-blue-500 animate-gradient-x [background-size:200%_200%]"
+            >
+              ArcherSmart.AI
             </span>
             <div class="text-2xl md:text-3xl font-bold mt-2">
               让企业知识真正流动, 释放数据的生产力

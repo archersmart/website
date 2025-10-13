@@ -106,10 +106,12 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 <template>
   <section id="product" class="container py-8 sm:py-4">
     <!-- 标题区域 -->
-    <div class="text-center mb-8">
+    <div class="text-center mb-8 bg-white dark:bg-background rounded-xl py-6">
       <h2 class="text-lg text-primary tracking-wider mb-2">产品</h2>
-      <h3 class="text-3xl md:text-4xl font-bold">ArcherSmart 产品矩阵</h3>
-      <p class="md:w-2/3 mx-auto text-muted-foreground mt-4">
+      <h3 class="text-3xl md:text-4xl font-bold text-sky-900 dark:text-foreground">
+        ArcherSmart 产品矩阵
+      </h3>
+      <p class="md:w-2/3 mx-auto mt-4 text-sky-800 dark:text-muted-foreground">
         预留：这里展示产品整体描述，概述平台能力与定位。
       </p>
     </div>
@@ -127,15 +129,15 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
       </Button>
     </div>
 
-    <!-- 主体内容 -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <!-- 主体内容：浅蓝羽化背景 -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start bg-gradient-to-b from-sky-50/90 to-transparent rounded-2xl py-6">
       <!-- 左侧：描述与功能列表 -->
       <Card class="bg-background border border-primary/20 hover:bg-brand-gradient/5 hover:border-brand-from/30 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]">
         <CardHeader>
           <CardTitle>
             <div class="space-y-1">
               <div class="text-primary text-base">{{ active.subtitle }}</div>
-              <div class="text-2xl md:text-3xl font-semibold">{{ active.title }}</div>
+              <div class="text-2xl md:text-3xl font-semibold text-sky-900 dark:text-foreground">{{ active.title }}</div>
             </div>
           </CardTitle>
         </CardHeader>
@@ -144,7 +146,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
           <!-- 描述区域（预留内容填充） -->
           <div>
             <h4 class="text-lg font-medium mb-2">产品描述</h4>
-            <p class="text-muted-foreground">
+            <p class="text-sky-800 dark:text-muted-foreground">
               {{ active.description }}
             </p>
           </div>
@@ -159,7 +161,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
                 class="flex items-center gap-2"
               >
                 <span class="inline-block size-2 rounded-full bg-primary"></span>
-                <span class="text-sm md:text-base">{{ f }}</span>
+                <span class="text-sm md:text-base text-sky-900 dark:text-foreground">{{ f }}</span>
               </li>
             </ul>
           </div>
