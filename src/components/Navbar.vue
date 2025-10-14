@@ -46,7 +46,7 @@ const { t, locale } = useI18n();
 const routeList = computed<RouteProps[]>(() => [
   // { href: "#testimonials", label: t("nav.testimonials") },
   // { href: "#team", label: t("nav.team") },
-  { href: "#contact", label: t("nav.contact") },
+  // { href: "#contact", label: t("nav.contact") },
   // { href: "#faq", label: t("nav.faq") },
 ]);
 
@@ -87,7 +87,7 @@ const onClickProduct = (key: string) => {
     :class="{
       'shadow-light': mode === 'light',
       'shadow-dark': mode === 'dark',
-      'w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border z-40 rounded-2xl flex justify-between items-center p-2 bg-card shadow-md': true,
+      'top-0 mx-auto sticky border z-40 flex justify-between items-center p-2 bg-card shadow-md': true,
     }"
   >
     <a
@@ -241,7 +241,7 @@ const onClickProduct = (key: string) => {
       >
         <a
           aria-label="View on GitHub"
-          href="https://github.com/leoMirandaa/shadcn-vue-landing-page.git"
+          href="https://github.com/archersmart"
           target="_blank"
         >
           <GithubIcon class="size-5" />

@@ -126,11 +126,11 @@ const vParallax = {
         <Card class="h-full bg-background/70 dark:bg-card/70 backdrop-blur-sm border border-border/60 shadow-sm rounded-2xl transition-all duration-300 ease-out transform will-change-transform hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-brand-gradient/10 hover:border-brand-from/30 hover:shadow-lg group animate-fade-up">
           <CardHeader class="flex justify-center items-center">
             <div
-              class="bg-primary/15 p-2 rounded-full ring-8 ring-primary/10 mb-4 transition-all duration-300 group-hover:bg-brand-gradient group-hover:ring-brand-from/30 [background-size:200%_200%] group-hover:animate-gradient-flow animate-float"
+              class="bg-primary/15 p-2 rounded-full ring-8 ring-primary/10 mb-4 transition-all duration-300 [background-size:200%_200%] "
             >
               <component
                 :is="iconMap[icon]"
-                class="size-6 text-primary group-hover:text-white transition-colors duration-300 drop-shadow-sm"
+                class="size-6 text-primary transition-colors duration-300 drop-shadow-sm"
               />
             </div>
 
