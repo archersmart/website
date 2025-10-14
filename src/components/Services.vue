@@ -70,14 +70,14 @@ const vParallax = {
     id="services"
     class="container py-24 sm:py-32"
   >
-    <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
+    <h2 class="text-lg text-white text-center mb-2 tracking-wider">
       应用场景
     </h2>
 
-    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
+    <h2 class="text-3xl md:text-4xl text-center font-bold mb-4 text-white">
       全场景智能化解决方案
     </h2>
-    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
+    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8 text-white">
       从知识管理到智能搜索，从AI助手到数据分析，
       ArcherSmart 为企业提供全方位的智能化服务。
     </h3>

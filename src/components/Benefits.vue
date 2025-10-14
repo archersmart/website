@@ -87,10 +87,10 @@ const iconMap: Record<
         >
           <CardHeader class="p-6 pb-4">
             <div class="flex justify-between items-start">
-              <div class="bg-brand-gradient p-2 rounded-xl ring-8 ring-brand-from/15 mb-4 shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:animate-glow">
+              <div class="p-2 rounded-xl ring-2 mb-4 shadow-sm">
                 <component
                   :is="iconMap[icon]"
-                  class="size-6 text-white"
+                  class="size-6 text-sky-blue-500"
                 />
               </div>
 

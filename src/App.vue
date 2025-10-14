@@ -127,7 +127,7 @@ onUnmounted(() => {
 
     <div
       ref="productEl"
-      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-sky-900"
+      class="bg-[url('background.svg')] text-white bg-repeat-round"
       :class="getClasses('product')"
       :style="{ transform: `scale(${getScale('product')})` }"
     >
@@ -145,7 +145,7 @@ onUnmounted(() => {
 
     <div
       ref="servicesEl"
-      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900"
+      class="bg-[url('background.svg')] text-white bg-repeat-round"
       :class="getClasses('services')"
       :style="{ transform: `scale(${getScale('services')})` }"
     >

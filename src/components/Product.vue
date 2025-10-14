@@ -104,14 +104,14 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 </script>
 
 <template>
-  <section id="product" class="container py-8 sm:py-4">
+  <section id="product" class="container py-24 sm:py-32">
     <!-- 标题区域 -->
     <div class="text-center mb-8 rounded-xl py-6">
-      <h2 class="text-lg text-primary tracking-wider mb-2">产品</h2>
-      <h3 class="text-3xl md:text-4xl font-bold text-sky-900 dark:text-foreground">
+      <h2 class="text-lg text-white tracking-wider mb-2">产品</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-white">
         ArcherSmart 产品矩阵
       </h3>
-      <p class="md:w-2/3 mx-auto mt-4 text-sky-800 dark:text-muted-foreground">
+      <p class="md:w-2/3 mx-auto mt-4 text-white">
         预留：这里展示产品整体描述，概述平台能力与定位。
       </p>
     </div>
@@ -121,7 +121,7 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
       <Button
         v-for="p in products"
         :key="p.key"
-        :variant="activeKey === p.key ? 'default' : 'outline'"
+        :variant="activeKey === p.key ? 'default' : 'secondary'"
         class="px-4 py-2"
         @click="setActive(p.key)"
       >
@@ -197,8 +197,8 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
               </div>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious class="left-2" />
-          <CarouselNext class="right-2" />
+          <CarouselPrevious class="left-2 text-primary" />
+          <CarouselNext class="right-2 text-primary" />
         </Carousel>
       </div>
     </div>
