@@ -109,7 +109,7 @@ onUnmounted(() => {
   <div class="from-sky-blue-500/90 to-transparent">
     <Navbar />
     <div
-      class="bg-gradient-to-b from-sky-blue-500/90 to-transparent text-blue-900 -mt-20 pt-40 pb-40"
+      class="bg-[url('background.svg')] text-white -mt-20 pt-40 pb-40"
     >
       <Hero />
     </div>
@@ -127,7 +127,7 @@ onUnmounted(() => {
 
     <div
       ref="productEl"
-      class="bg-[url('background.svg')] text-white bg-repeat-round"
+      class="bg-[url('background.svg')] text-white"
       :class="getClasses('product')"
       :style="{ transform: `scale(${getScale('product')})` }"
     >
@@ -145,7 +145,7 @@ onUnmounted(() => {
 
     <div
       ref="servicesEl"
-      class="bg-[url('background.svg')] text-white bg-repeat-round"
+      class="bg-[url('background.svg')] text-white"
       :class="getClasses('services')"
       :style="{ transform: `scale(${getScale('services')})` }"
     >

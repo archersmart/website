@@ -77,7 +77,7 @@ onUnmounted(() => {
           </h1>
         </div>
 
-        <p class="max-w-screen-sm mx-auto text-xl text-muted-foreground">
+        <p class="max-w-screen-sm mx-auto text-xl">
           <span>{{ displayedText }}</span>
           <span v-if="isTyping" aria-hidden="true" class="typewriter-cursor align-baseline"></span>
         </p>
