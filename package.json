@@ -22,7 +22,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "@selemondev/vue3-marquee": "^0.0.8",
