@@ -4,7 +4,7 @@ import { useI18n } from "vue-i18n";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
-mode.value = "dark";
+mode.value = "light";
 
 import {
   NavigationMenu,
@@ -28,7 +28,7 @@ import { Separator } from "@/components/ui/separator";
 
 import { ChevronsDown, Menu, Languages } from "lucide-vue-next";
 import GithubIcon from "@/icons/GithubIcon.vue";
-import ToggleTheme from "./ToggleTheme.vue";
+// import ToggleTheme from "./ToggleTheme.vue";
 import { setLocale } from "@/i18n";
 
 interface RouteProps {
@@ -151,7 +151,7 @@ const onClickProduct = (key: string) => {
             <SheetFooter class="flex-col sm:flex-col justify-start items-start">
               <Separator class="mb-2" />
 
-              <ToggleTheme />
+              <!-- <ToggleTheme /> -->
 
               <Button
                 size="sm"
@@ -221,7 +221,7 @@ const onClickProduct = (key: string) => {
       </NavigationMenu>
 
       <div class="hidden lg:flex">
-        <ToggleTheme />
+        <!-- <ToggleTheme /> -->
 
         <Button
           size="sm"
