@@ -39,6 +39,7 @@ interface RouteProps {
 interface FeatureProps {
   title: string;
   description: string;
+  key: string;
 }
 
 const { t, locale } = useI18n();

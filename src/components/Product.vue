@@ -168,10 +168,10 @@ const activeScreens = computed(() => screenshots[activeKey.value] ?? []);
 
           <!-- 交互按钮 -->
           <div class="flex gap-3 pt-2">
-            <Button variant="" class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
+            <Button variant="default" class="px-4" @click="onLearnMore(active.key)">了解更多</Button>
             <Button 
-              variant="" 
-              class="px-4"
+              variant="outline" 
+              class="px-4 hover:bg-transparent hover:text-primary"
               @click="onOpenDocument(active.key)"
             >
               文档

@@ -4,17 +4,22 @@ import Hero from "./components/Hero.vue";
 import Benefits from "./components/Benefits.vue";
 import Features from "./components/Features.vue";
 import Services from "./components/Services.vue";
-import HowItWorks from "./components/HowItWorks.vue";
+// import HowItWorks from "./components/HowItWorks.vue";
 import Sponsors from "./components/Sponsors.vue";
-import Testimonials from "./components/Testimonials.vue";
-import Team from "./components/Team.vue";
-import Pricing from "./components/Pricing.vue";
-import Community from "./components/Community.vue";
-import Contact from "./components/Contact.vue";
-import FAQ from "./components/FAQ.vue";
+// import Testimonials from "./components/Testimonials.vue";
+// import Team from "./components/Team.vue";
+// import Pricing from "./components/Pricing.vue";
+// import Community from "./components/Community.vue";
+// import Contact from "./components/Contact.vue";
+// import FAQ from "./components/FAQ.vue";
 import Footer from "./components/Footer.vue";
 import Product from "./components/Product.vue";
-import { ref, onMounted, onUnmounted, computed } from "vue";
+import { 
+  ref, 
+  onMounted, 
+  onUnmounted, 
+  // computed,
+} from "vue";
 
 // 滚动聚焦：Sponsors/Benefits/Features/Services 被聚焦时放大与暖色调，其他略缩小与冷色调
 type SectionId = "product" | "sponsors" | "benefits" | "features" | "services";

@@ -4,12 +4,12 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
+  // CardFooter,
 } from "@/components/ui/card";
 
-import LinkedInIcon from "@/icons/LinkedInIcon.vue";
-import GithubIcon from "@/icons/GithubIcon.vue";
-import XIcon from "@/icons/XIcon.vue";
+// import LinkedInIcon from "@/icons/LinkedInIcon.vue";
+// import GithubIcon from "@/icons/GithubIcon.vue";
+// import XIcon from "@/icons/XIcon.vue";
 
 interface TeamProps {
   imageUrl: string;
@@ -44,18 +44,18 @@ const teamList: TeamProps[] = [
   },
 ];
 
-const socialIcon = (socialName: string) => {
-  switch (socialName) {
-    case "LinkedIn":
-      return LinkedInIcon;
+// const socialIcon = (socialName: string) => {
+//   switch (socialName) {
+//     case "LinkedIn":
+//       return LinkedInIcon;
 
-    case "Github":
-      return GithubIcon;
+//     case "Github":
+//       return GithubIcon;
 
-    case "X":
-      return XIcon;
-  }
-};
+//     case "X":
+//       return XIcon;
+//   }
+// };
 </script>
 
 <template>
@@ -80,7 +80,7 @@ const socialIcon = (socialName: string) => {
           firstName,
           lastName,
           positions,
-          socialNetworks,
+          // socialNetworks,
         } in teamList"
         :key="imageUrl"
         class="bg-muted/60 dark:bg-card flex flex-col h-full overflow-hidden group/hoverimg"
