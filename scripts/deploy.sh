@@ -21,6 +21,8 @@ echo "[deploy] 目标分支: $BRANCH"
 echo "[deploy] 构建目录: $DIST_DIR"
 echo "[deploy] 工作目录: $WORK_DIR"
 
+rm -rf "$WORK_DIR"
+
 if [[ "${SKIP_BUILD:-0}" != "1" ]]; then
   echo "[deploy] 执行构建: npm run build"
   npm run build
@@ -53,7 +55,7 @@ if [[ -d "$WORK_DIR/.git" ]]; then
   fi
 else
   echo "[deploy] 克隆目标仓库到工作目录"
-  git clone --depth=1 -b "$BRANCH" "$REPO" "$WORK_DIR" || {
+  git clone -b "$BRANCH" "$REPO" "$WORK_DIR" || {
     echo "[deploy] 远端不存在分支 $BRANCH，尝试默认克隆后创建分支"
     git clone "$REPO" "$WORK_DIR"
     git -C "$WORK_DIR" checkout --orphan "$BRANCH" || true
@@ -62,14 +64,9 @@ fi
 
 # 同步 dist 内容到工作目录（移除旧文件并更新）
 echo "[deploy] 同步 dist -> $WORK_DIR"
-if command -v rsync >/dev/null 2>&1; then
-  rsync -av --delete "$DIST_DIR/" "$WORK_DIR/"
-else
-  echo "[deploy] rsync 不可用，改用 cp"
-  # 删除工作目录除 .git 外的所有文件
-  find "$WORK_DIR" -mindepth 1 -not -path "$WORK_DIR/.git" -not -path "$WORK_DIR/.git/*" -exec rm -rf {} +
-  cp -R "$DIST_DIR/"* "$WORK_DIR/"
-fi
+# 删除工作目录除 .git 外的所有文件
+find "$WORK_DIR" -mindepth 1 -not -path "$WORK_DIR/.git" -not -path "$WORK_DIR/.git/*" -exec rm -rf {} +
+cp -R "$DIST_DIR/"* "$WORK_DIR/"
 
 # 提交并推送
 echo "[deploy] 准备提交变更"
