@@ -1,6 +1,6 @@
 {
-  "name": "shadcn-vue-landing-page",
-  "description": "Shadcn/Vue landing page template using Vue, Shadcn/Vue + TypeScript + Tailwind CSS.",
+  "name": "ArcherSmart.AI",
+  "description": "ArcherSmart.AI is a AI-powered customer service platform that helps businesses to improve customer satisfaction and reduce customer service costs.",
   "version": "0.1.1",
   "author": {
     "name": "Leopoldo Miranda",
@@ -40,6 +40,7 @@
     "vee-validate": "^4.13.2",
     "vue": "^3.5.12",
     "vue-i18n": "^9.14.5",
+    "vue-router": "^4.6.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {

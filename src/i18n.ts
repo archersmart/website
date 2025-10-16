@@ -20,6 +20,8 @@ export const i18n = createI18n({
         language: '语言',
         zh: '中文',
         en: '英文',
+        case: '客户案例',
+        home: '首页',
       },
       hero: {
         subtitle: '让企业知识真正流动, 释放数据的生产力',
@@ -42,11 +44,13 @@ export const i18n = createI18n({
         team: 'Team',
         contact: 'Contact',
         faq: 'FAQ',
+        home: 'Home',
         theme: 'Theme',
         github: 'View on GitHub',
         language: 'Language',
         zh: 'Chinese',
         en: 'English',
+        case: 'Customer Cases',
       },
       hero: {
         subtitle: 'Let enterprise knowledge truly flow',

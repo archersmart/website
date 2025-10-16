@@ -1,1 +1,2 @@
 项目使用tailwindcss作为css框架
+shadcn-vue作为组件库
