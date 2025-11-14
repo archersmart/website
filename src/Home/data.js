@@ -1,107 +1,84 @@
+import azureLogo from '../assets/logo/azure-svgrepo-com.svg';
+import suseLogo from '../assets/logo/suse-svgrepo-com.svg';
+import jomooLogo from '../assets/logo/JOMOO-BXegpgze.png';
+import bamaLogo from '../assets/logo/BAMA_TEA-GpeuIlCr.png';
+import igarashiLogo from '../assets/logo/igarashi.png';
+
 export const header = [
+  {
+    title: '首页',
+    children: [],
+  },
   {
     title: '产品',
     children: [
       {
-        title: '云凤蝶', desc: '移动建站平台', img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg', link: 'https://fengdie.alipay-eco.com/intro', top: '2px',
+        title: '云凤蝶',
+        desc: '移动建站平台',
+        img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg',
+        link: 'https://fengdie.alipay-eco.com/intro',
+        top: '2px',
       },
     ],
   },
   {
-    title: '设计体系',
-    children: [
-      {
-        title: '设计价值观', desc: 'Design Values', img: 'https://gw.alipayobjects.com/zos/rmsportal/zMeJnhxAtpXPZAUhUKJH.svg', link: 'https://ant.design/docs/spec/values-cn',
-      },
-      {
-        title: '视觉', desc: 'Visual', img: 'https://gw.alipayobjects.com/zos/rmsportal/qkNZxQRDqvFJscXVDmKp.svg', link: 'https://ant.design/docs/spec/colors-cn',
-      },
-      {
-        title: '可视化', desc: 'Visualisation', img: 'https://gw.alipayobjects.com/zos/rmsportal/MrUQjZNOJhYJCSZZuJDr.svg', link: 'https://antv.alipay.com/zh-cn/vis/index.html',
-      },
-    ],
-  },
-  {
-    title: '技术方案',
-    children: [
-      {
-        title: 'Ant Design', desc: '蚂蚁 UI 体系', img: 'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg', link: 'https://ant.design',
-      },
-      {
-        title: 'AntV', desc: '蚂蚁数据可视化解决方案', img: 'https://gw.alipayobjects.com/zos/rmsportal/crqUoMinEgjMeGGFAKzG.svg', link: 'https://antv.alipay.com',
-      },
-      {
-        title: 'Egg', desc: '企业级 Node 开发框架', img: 'https://gw.alipayobjects.com/zos/rmsportal/nEEwwpmNVihZimnBAtMf.svg', link: 'https://eggjs.org',
-      },
-    ],
-  },
-  {
-    title: '关于',
-    children: [
-      {
-        title: '蚂蚁金服体验科技专栏', desc: '探索极致用户体验与最佳工程实践', img: 'https://gw.alipayobjects.com/zos/rmsportal/VsVqfjYxPTJaFbPcZqMb.svg', link: 'https://zhuanlan.zhihu.com/xtech',
-      },
-    ],
+    title: '客户案例',
+    children: [],
   },
 ];
 export const banner = [
   {
     img: 'https://gw.alipayobjects.com/zos/rmsportal/cTyLQiaRrpzxFAuWwoDQ.svg',
-    imgMobile: 'https://gw.alipayobjects.com/zos/rmsportal/ksMYqrCyhwQNdBKReFIU.svg',
+    imgMobile:
+      'https://gw.alipayobjects.com/zos/rmsportal/ksMYqrCyhwQNdBKReFIU.svg',
     className: 'seeconf-wrap',
     children: [
-      { children: 'Seeking Experience & Engineering Conference', className: 'seeconf-en-name' },
-      { children: '首届蚂蚁体验科技大会', className: 'seeconf-title', tag: 'h1' },
-      { children: '探索极致用户体验与最佳工程实践', className: 'seeconf-cn-name' },
+      {
+        children:
+          '释放数据的生产力，一个语义驱动、权限安全的企业知识图谱平台，让企业拥有自己的AI搜索与智能助手。',
+        className: 'seeconf-en-name',
+      },
+      { children: 'ArcherSmart.AI', className: 'seeconf-title', tag: 'h1' },
+      { children: '线下零售与智能生产的AI引擎', className: 'seeconf-cn-name' },
       {
         children: '了解详细',
         className: 'banner-button',
         tag: 'button',
         link: 'https://seeconf.alipay.com/',
       },
-      { children: '2018.01.06 / 中国·杭州', className: 'seeconf-time' },
-    ],
-  },
-  {
-    img: 'https://gw.alipayobjects.com/zos/rmsportal/cTyLQiaRrpzxFAuWwoDQ.svg',
-    imgMobile: 'https://gw.alipayobjects.com/zos/rmsportal/ksMYqrCyhwQNdBKReFIU.svg',
-    className: 'seeconf-wrap',
-    children: [
-      { children: 'Seeking Experience & Engineering Conference', className: 'seeconf-en-name' },
-      { children: '首届蚂蚁体验科技大会', className: 'seeconf-title', tag: 'h1' },
-      { children: '探索极致用户体验与最佳工程实践', className: 'seeconf-cn-name' },
-      {
-        children: '了解详细',
-        className: 'banner-button',
-        tag: 'button',
-        link: 'https://seeconf.alipay.com/',
-      },
-      { children: '2018.01.06 / 中国·杭州', className: 'seeconf-time' },
     ],
   },
 ];
 export const page1 = {
-  title: '自然好用的设计',
+  title: '客户价值与反馈',
   children: [
     {
-      title: '设计价值观',
-      content: 'Design Values',
+      title: '搜索效率提升4倍',
+      content: '日均查询 14 次，文档查找时间显著缩短。',
       src: 'https://gw.alipayobjects.com/zos/rmsportal/KtRzkMmxBuWCVjPbBgRY.svg',
       color: '#EB2F96',
       shadowColor: 'rgba(166, 55, 112, 0.08)',
       link: 'https://ant.design/docs/spec/values-cn',
     },
     {
-      title: '视觉',
-      content: 'Visual',
+      title: '活跃度显著领先',
+      content: '月活率达 40%，远超行业平均水平（2-3倍）。',
       src: 'https://gw.alipayobjects.com/zos/rmsportal/qIcZMXoztWjrnxzCNTHv.svg',
       color: '#1890FF',
       shadowColor: 'rgba(15, 93, 166, 0.08)',
       link: 'https://ant.design/docs/spec/colors-cn',
     },
     {
-      title: '可视化',
-      content: 'Visualisation',
+      title: '业务价值可量化',
+      content: '提升知识利用率，直接转化为人效提升与收入增长。',
+      src: 'https://gw.alipayobjects.com/zos/rmsportal/eLtHtrKjXfabZfRchvVT.svg',
+      color: '#AB33F7',
+      shadowColor: 'rgba(112, 73, 166, 0.08)',
+      link: 'https://antv.alipay.com/zh-cn/vis/index.html',
+    },
+    {
+      title: '准确率高达 98%',
+      content: '结合知识图谱与语义搜索，极大提升查询准确率。',
       src: 'https://gw.alipayobjects.com/zos/rmsportal/eLtHtrKjXfabZfRchvVT.svg',
       color: '#AB33F7',
       shadowColor: 'rgba(112, 73, 166, 0.08)',
@@ -127,16 +104,13 @@ export const page3 = {
 };
 
 export const page4 = {
-  title: '众多企业正在使用',
+  title: '客户与生态合作伙伴',
   children: [
-    'https://gw.alipayobjects.com/zos/rmsportal/qImQXNUdQgqAKpPgzxyK.svg', // 阿里巴巴
-    'https://gw.alipayobjects.com/zos/rmsportal/LqRoouplkwgeOVjFBIRp.svg', // 蚂蚁金服
-    'https://gw.alipayobjects.com/zos/rmsportal/TLCyoAagnCGXUlbsMTWq.svg', // 人民网
-    'https://gw.alipayobjects.com/zos/rmsportal/HmCGMKcJQMwfPLNCIhOH.svg', // cisco
-    'https://gw.alipayobjects.com/zos/rmsportal/aqldfFDDqRVFRxqLUZOk.svg', // GrowingIO
-    'https://gw.alipayobjects.com/zos/rmsportal/rqNeEFCGFuwiDKHaVaPp.svg', // 饿了么
-    'https://gw.alipayobjects.com/zos/rmsportal/FdborlfwBxkWIqKbgRtq.svg', // 滴滴出行
-    'https://gw.alipayobjects.com/zos/rmsportal/coPmiBkAGVTuTNFVRUcg.png', // 飞凡网
+    azureLogo,
+    suseLogo,
+    jomooLogo,
+    bamaLogo,
+    igarashiLogo,
   ],
 };
 
@@ -145,7 +119,7 @@ export const footer = [
     title: '蚂蚁科技',
     children: [
       { title: '蚂蚁金服开放平台', link: 'https://open.alipay.com' },
-      { title: '蚂蚁体验云', link: 'https://xcloud.alipay.com' },
+      { title: 'ArcherSmart AI', link: 'https://xcloud.alipay.com' },
       { title: '蚂蚁金融云', link: 'https://www.cloud.alipay.com' },
     ],
   },
@@ -166,7 +140,7 @@ export const footer = [
     ],
   },
   {
-    title: '蚂蚁体验云',
+    title: 'ArcherSmart AI',
     icon: 'https://gw.alipayobjects.com/zos/rmsportal/wdarlDDcdCaVoCprCRwB.svg',
     children: [
       { title: 'Ant Design', desc: '蚂蚁 UI 体系', link: 'https://ant.design' },

@@ -5,9 +5,13 @@ import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { page4 } from './data';
 
 export default function Page4() {
+  // 统一 Logo 尺寸与等比缩放：容器 .page4-item 高度为 68px，此处设 64px 以避免溢出
+  const logoSize = 128;
+  const logoStyle = { width: logoSize, height: logoSize, objectFit: 'contain' };
+
   const children = page4.children.map((img, i) => (
-    <Col md={6} xs={24} key={i.toString()} className="page4-item">
-      <img src={img} alt="img" />
+    <Col md={8} xs={24} key={i.toString()} className="page4-item">
+      <img src={img} alt="logo" style={logoStyle} />
     </Col>
   ));
   return (

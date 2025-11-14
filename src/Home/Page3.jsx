@@ -15,18 +15,24 @@ export default class Page3 extends React.PureComponent {
     const children = page3.children.map((item, i) => (
       <Element key={i.toString()}>
         <BgElement className="banner" key="bg">
-          <Video
-            loop
-            muted
-            controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
-            poster={isMobile ? item.imgMobile : item.img}
-            key="video"
-          >
-            <source src={item.src} />
-          </Video>
+          {isMobile ? (
+            <img src={item.imgMobile} alt="poster" />
+          ) : (
+            <Video
+              loop
+              muted
+              playsInline
+              preload="none"
+              controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+              poster={item.img}
+              key="video"
+              onError={() => {}}
+            >
+              <source src={item.src} />
+            </Video>
+          )}
         </BgElement>
       </Element>
-
     ));
     const childrenToRender = (
       <TweenOne key="banner-wrapper" animation={{ type: 'from', y: 30, opacity: 0 }}>

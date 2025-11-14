@@ -49,11 +49,14 @@ class Banner extends React.PureComponent {
     return (
       <div className="banner page-wrapper" >
         <div className="page">
-          <div className="logo" />
-          <BannerAnim type="across" duration={550} ease="easeInOutQuint">
-            {bannerChildren}
-          </BannerAnim>
+          <div className="logo" >
+            ArcherSmart.AI
+          </div>
         </div>
+        <h2 className="slogan">
+          线下零售与智能生产的AI引擎
+        </h2>
+        <div className="top-wrap-background" />
       </div>
     );
   }

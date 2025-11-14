@@ -14,7 +14,7 @@ export default function Header(props) {
       </a>
     ));
     return (
-      <Col key={i.toString()} span={6}>
+      <Col key={i.toString()} span={8}>
         <Tooltip title={content} placement="bottom" overlayClassName="header-tip-wrap">
           <span className="nav-title">{item.title}</span>
         </Tooltip>

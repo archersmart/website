@@ -66,7 +66,7 @@ export default class Design extends React.PureComponent {
         />
       ));
       return (
-        <Col md={8} xs={24} key={i.toString()} className="page1-item">
+        <Col md={6} xs={24} key={i.toString()} className="page1-item">
           <a
             className="page1-item-link"
             href={item.link}
