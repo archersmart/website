@@ -1,7 +1,31 @@
 import React from 'react';
 import { Row, Col, Tooltip } from 'antd';
 import { withRouter } from 'react-router-dom';
-import { header } from '../Home/data';
+
+const header = [
+  {
+    title: '首页',
+    children: [],
+    link: '/',
+  },
+  {
+    title: '产品',
+    children: [
+      {
+        title: '云凤蝶',
+        desc: '移动建站平台',
+        img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg',
+        link: '/products/aps',
+        top: '2px',
+      },
+    ],
+  },
+  {
+    title: '客户案例',
+    children: [],
+  },
+];
+
 
 function Header(props) {
   const menuChild = header.map((item, i) => {

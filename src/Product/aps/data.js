@@ -4,28 +4,6 @@ import jomooLogo from '../assets/logo/JOMOO-BXegpgze.png';
 import bamaLogo from '../assets/logo/BAMA_TEA-GpeuIlCr.png';
 import igarashiLogo from '../assets/logo/igarashi.png';
 
-export const header = [
-  {
-    title: '首页',
-    children: [],
-  },
-  {
-    title: '产品',
-    children: [
-      {
-        title: '云凤蝶',
-        desc: '移动建站平台',
-        img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg',
-        link: '/products/aps',
-        top: '2px',
-      },
-    ],
-  },
-  {
-    title: '客户案例',
-    children: [],
-  },
-];
 export const banner = [
   {
     img: 'https://gw.alipayobjects.com/zos/rmsportal/cTyLQiaRrpzxFAuWwoDQ.svg',
