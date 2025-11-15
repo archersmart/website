@@ -8,5 +8,10 @@ module.exports = function(webpackConfig) {
     style: 'css',
   }]);
 
+  webpackConfig.resolve = webpackConfig.resolve || {};
+  webpackConfig.resolve.alias = Object.assign({}, webpackConfig.resolve.alias || {}, {
+    'tween-one/es': 'tween-one/lib',
+  });
+
   return webpackConfig;
 };

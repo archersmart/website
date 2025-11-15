@@ -8,7 +8,6 @@ export const header = [
   {
     title: '首页',
     children: [],
-    link: '/',
   },
   {
     title: '产品',

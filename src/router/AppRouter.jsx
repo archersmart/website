@@ -1,8 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import QueueAnim from 'rc-queue-anim';
 import Home from '../Home';
+import LLMOS from '../Product/llmos';
+
+
 
 const Loading = () => null;
 
@@ -28,7 +31,7 @@ const CaseStudyDetail = Loadable({
 export default function AppRouter() {
   const routes = React.createElement(Switch, { key: 'routes' },
     React.createElement(Route, { exact: true, path: '/', component: Home }),
-    React.createElement(Route, { exact: true, path: '/products/:id', component: ProductDetail }),
+    React.createElement(Route, { exact: true, path: '/products/llmos', component: LLMOS }),
     React.createElement(Route, { exact: true, path: '/case-studies', component: CaseStudiesList }),
     React.createElement(Route, { exact: true, path: '/case-studies/:id', component: CaseStudyDetail })
   );
