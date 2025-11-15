@@ -16,7 +16,7 @@ export const header = [
         title: '云凤蝶',
         desc: '移动建站平台',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg',
-        link: '/products/llmos',
+        link: '/products/aps',
         top: '2px',
       },
     ],
