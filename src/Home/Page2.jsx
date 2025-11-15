@@ -3,10 +3,10 @@ import QueueAnim from 'rc-queue-anim';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import { Row, Col, Icon } from 'antd';
 
-import Tetris from './technology-comp/Tetris';
-import Column from './technology-comp/Column';
-import Coordinate from './technology-comp/Coordinate';
-import Building from './technology-comp/Building';
+import Tetris from '../components/technology-comp/Tetris';
+import Column from '../components/technology-comp/Column';
+import Coordinate from '../components/technology-comp/Coordinate';
+import Building from '../components/technology-comp/Building';
 
 
 const pageData = [

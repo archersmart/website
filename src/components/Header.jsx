@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Tooltip } from 'antd';
 import { withRouter } from 'react-router-dom';
-import { header } from './data';
+import { header } from '../Home/data';
 
 function Header(props) {
   const menuChild = header.map((item, i) => {

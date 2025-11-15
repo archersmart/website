@@ -121,38 +121,12 @@ export default class Coordinate extends React.PureComponent {
             component="g"
             animation={hover ?
               [{ x: -42 }, { y: -32 }, { x: 42 }, { y: 28 }, { x: 0 }, { y: 0 }] :
-              [{ x: 0 }, { y: 0 }]
-            }
+              [{ x: 0 }, { y: 0 }]}
           >
             <g id="Group-42" transform="translate(141.000000, 41.000000)">
               <rect id="Rectangle-9" fill="#1890FF" opacity="0.6" x="1" y="14" width="34" height="34" />
               <rect id="Rectangle-9" stroke="#FFFFFF" opacity="0.4" x="15.5" y="27.5" width="5" height="5" />
               <path d="M18,30.7327586 L18,0.267241379" id="Line" stroke="#FFFFFF" opacity="0.5" strokeLinecap="square" />
-              <path
-                id="Line-decoration-1"
-                d="M18,0.267241379 L15,11.0672414 L21,11.0672414 L18,0.267241379 Z"
-                stroke="#FFFFFF"
-                opacity="0.5"
-                strokeLinecap="square"
-              />
-              <path d="M18.2681159,30 L54.7476522,30" id="Line-2" stroke="#FFFFFF" opacity="0.5" strokeLinecap="square" />
-              <path
-                id="Line-2-decoration-1"
-                d="M54.7476522,30 L43.9476522,27 L43.9476522,33 L54.7476522,30 Z"
-                stroke="#FFFFFF"
-                opacity="0.5"
-                strokeLinecap="square"
-              />
-              <rect id="Rectangle-10" fill="#EB2F96" x="9" y="48" width="18" height="1" />
-              <rect
-                id="Rectangle-10"
-                fill="#FADB14"
-                transform="translate(1.000000, 31.000000) rotate(90.000000) translate(-1.000000, -31.000000) "
-                x="-8"
-                y="30.5"
-                width="18"
-                height="1"
-              />
             </g>
           </TweenOne>
         </g>

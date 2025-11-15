@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { footer } from './data';
+import { footer } from '../Home/data';
 
 export default function Footer() {
   return (

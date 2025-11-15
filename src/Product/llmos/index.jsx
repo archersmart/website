@@ -1,12 +1,12 @@
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-import Header from '../../Home/Header';
+import Header from '../../components/Header';
 import Banner from '../../components/Banner';
 import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './page3';
 import Page4 from './page4';
-import Footer from '../../Home/Footer';
+import Footer from '../../components/Footer';
 import './static/style';
 // import Background from '../../components/Background';
 
