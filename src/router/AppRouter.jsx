@@ -1,13 +1,19 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { Spin } from 'antd';
 import Loadable from 'react-loadable';
 import QueueAnim from 'rc-queue-anim';
 import Home from '../Home';
 import APS from '../Product/aps';
+import RouteLoading from '../components/RouteLoading';
 
 
 
-const Loading = () => null;
+const Loading = () => (
+  <div style={{ position: 'fixed', inset: 0, background: 'rgba(255,255,255,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999 }}>
+    <Spin size="large" tip="页面加载中..." />
+  </div>
+);
 
 const ProductDetail = Loadable({
   loader: () => new Promise(resolve =>
@@ -36,6 +42,7 @@ export default function AppRouter() {
     React.createElement(Route, { exact: true, path: '/case-studies/:id', component: CaseStudyDetail })
   );
   return React.createElement(Router, null,
+    React.createElement(RouteLoading, null),
     React.createElement(QueueAnim, { type: 'bottom', ease: ['easeOutCubic', 'easeInQuad'] }, routes)
   );
 }
