@@ -5,6 +5,7 @@ import Loadable from 'react-loadable';
 import QueueAnim from 'rc-queue-anim';
 import Home from '../Home';
 import APS from '../Product/aps';
+import CustomerCase from '../CustomerCase'
 import RouteLoading from '../components/RouteLoading';
 
 
@@ -38,6 +39,7 @@ export default function AppRouter() {
   const routes = React.createElement(Switch, { key: 'routes' },
     React.createElement(Route, { exact: true, path: '/', component: Home }),
     React.createElement(Route, { exact: true, path: '/products/aps', component: APS }),
+    React.createElement(Route, { exact: true, path: '/customer-case', component: CustomerCase }),
     React.createElement(Route, { exact: true, path: '/case-studies', component: CaseStudiesList }),
     React.createElement(Route, { exact: true, path: '/case-studies/:id', component: CaseStudyDetail })
   );

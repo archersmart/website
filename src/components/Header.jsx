@@ -23,6 +23,7 @@ const header = [
   {
     title: '客户案例',
     children: [],
+    link: '/customer-case',
   },
 ];
 
