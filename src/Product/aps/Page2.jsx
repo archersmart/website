@@ -17,16 +17,13 @@ export default function Page2() {
         type="bottom"
         leaveReverse
       >
-        <h2 key="h2">设计模式</h2>
-        <p key="p" style={{ maxWidth: 260 }}>总结中后台设计中反复出现的问题，并提供相应的解决方案。</p>
-        <div key="button">
-          <a>
-            <Button type="primary" size="large">
-              了解更多
-              <Icon type="right" />
-            </Button>
-          </a>
-        </div>
+        <h2 key="h2">BOM 管理</h2>
+        <p key="p1" style={{ maxWidth: 260 }}>
+          通过精细化管理产品物料清单，准确匹配原材料需求与库存，确保生产排单的完整性与可执行性。
+        </p>
+        <p key="p2" style={{ maxWidth: 260 }}>
+          以可视化图表清晰展现物料清单结构，帮助快速识别用料需求与缺口，提升排产透明度与可控性。
+        </p>
       </QueueAnim>
       <TweenOne
         key="image"

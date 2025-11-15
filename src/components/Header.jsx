@@ -12,8 +12,8 @@ const header = [
     title: '产品',
     children: [
       {
-        title: '云凤蝶',
-        desc: '移动建站平台',
+        title: 'Aps',
+        desc: 'AI 智能排产',
         img: 'https://gw.alipayobjects.com/zos/rmsportal/fLPzRmwAurHkPDVfHHiQ.svg',
         link: '/products/aps',
         top: '2px',

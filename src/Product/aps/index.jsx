@@ -43,8 +43,8 @@ class Home extends React.PureComponent {
           key="banner" 
           isMobile={this.state.isMobile} 
           navToShadow={this.navToShadow}
-          logo="AI Infra (LLMOS)"
-          slogan="面向企业的 AI 基础设施"
+          logo="ArcherSmart Agent (APS)"
+          slogan="可执行任务的智能体平台"
         />,
         // <Background key="background" />,
 

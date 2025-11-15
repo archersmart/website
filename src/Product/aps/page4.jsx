@@ -13,10 +13,10 @@ export default function Page4() {
         type="bottom"
       >
         <h2 key="h2">
-          微小 · 确定 · 幸福
+          部署与服务保障
         </h2>
         <p key="p">
-          这是一套致力于提升『用户』和『设计者』使用体验的中后台设计语言。
+          提供专业的部署与服务保障，确保系统的稳定运行与数据的安全保护
         </p>
       </QueueAnim>
       <TweenOne

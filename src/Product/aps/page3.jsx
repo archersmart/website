@@ -21,18 +21,13 @@ export default function Page3({ isMobile }) {
         leaveReverse
         style={{ top: '40%' }}
       >
-        <h2 key="h2">丰富的基础组件'</h2>
-        <p key="p" style={{ maxWidth: 280 }}>
-          丰富、灵活、实用的基础组件，为业务产品提供强有力的设计支持。
+        <h2 key="h2">工作日历与生产线管理</h2>
+        <p key="p1" style={{ maxWidth: 280 }}>
+          生产线批量管理：支持生产线的批量导入与导出，快速完成部署与维护
         </p>
-        <div key="button">
-          <a>
-            <Button type="primary" size="large">
-              了解更多
-              <Icon type="right" />
-            </Button>
-          </a>
-        </div>
+        <p key="p2" style={{ maxWidth: 280 }}>
+          灵活产能配置：自定义工作日历与生产线产能，精确匹配多样化生产需求
+        </p>
       </QueueAnim>
     </ScrollOverPack>
   );

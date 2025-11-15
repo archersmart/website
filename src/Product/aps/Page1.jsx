@@ -20,16 +20,16 @@ export default function Page1({ isMobile }) {
         key="text"
         leaveReverse
       >
-        <h2 key="h2">最佳实践</h2>
-        <p key="p" style={{ maxWidth: 310 }}>近一年的中后台设计实践，积累了大量的优秀案例。</p>
-        <div key="button">
-          <a>
-            <Button type="primary" size="large">
-              了解更多
-              <Icon type="right" />
-            </Button>
-          </a>
-        </div>
+        <h2 key="h2">智能排单与原材料分析</h2>
+        <p key="p1" style={{ maxWidth: 310 }}>
+          融合关键要素：订单需求 + 产能资源 + 原材料库存
+        </p>
+        <p key="p2" style={{ maxWidth: 310 }}>
+          智能分析优化：AI 自动识别瓶颈并动态排单
+        </p>
+        <p key="p3" style={{ maxWidth: 310 }}>
+          创造业务价值：高质量排产，避免缺料与积压，提升交付效率与库存积压率
+        </p>
       </QueueAnim>
     </ScrollOverPack>
   );
