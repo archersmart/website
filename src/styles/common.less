@@ -1,0 +1,133 @@
+@import "./variables.less";
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  .nav {
+    max-width: 424px;
+    text-align: center;
+    margin: auto;
+    &-title {
+      display: block;
+      padding-top: 22px;
+      border-top: 2px solid transparent;
+      transition: border .3s @ease-out;
+      color: #fff;
+      cursor: pointer;
+      &:hover { border-top-color: #fff; }
+    }
+  }
+}
+
+.header-tip-wrap {
+  .ant-tooltip-arrow { border-bottom-color: rgba(1, 24, 116, .96); }
+  .ant-tooltip-inner {
+    background-color: rgba(1, 24, 116, .96);
+    box-shadow: 0 8px 16px #001b72;
+    padding: 0;
+    max-width: none;
+    overflow: hidden;
+    .tip-block {
+      display: flex;
+      align-items: center;
+      padding: 26px;
+      min-width: 296px;
+      transition: background .3s @ease-in-out;
+      background: rgba(1, 24, 116, 0);
+      .tip-img { display: inline-block; }
+      .tip-content {
+        display: inline-block;
+        color: #fff;
+        margin-left: 16px;
+        line-height: 22px;
+        > div { opacity: 0.65; font-size: 12px; line-height: 20px; }
+      }
+      &:hover{ background-color: rgb(1, 24, 116); }
+    }
+  }
+}
+
+.footer { background:linear-gradient(to bottom, #031D6A, #000E48); color: #fff; }
+.footer-wrap {
+  padding: 72px 24px 144px;
+  .footer-item {
+    display: inline-block; text-align: left;
+    h2 { margin-bottom: 24px; color: #fff; font-size: 16px; }
+    div { margin-bottom: 12px; font-size: 14px; a { color: rgba(256, 256, 256, 0.9); } }
+  }
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 21px 0; line-height: 22px; text-align: right; color: rgba(255, 255, 255, 0.6);
+  a { color: rgba(255, 255, 255, 0.6); }
+}
+
+.page { 
+  &-wrapper { width: 100%; will-change: transform; }
+  width: 100%; max-width: 1200px; padding: 0 24px; margin: auto; overflow: hidden;
+  > h1 { margin: 144px auto 32px; font-size: 38px; line-height: 46px; color: #0d1a26; font-weight: 400; text-align: center; }
+  > i { width: 64px; margin: auto; height: 2px; display: block; background: linear-gradient(to right, rgba(22, 217, 227, 1) 0%, rgba(22, 119, 227, 1) 100%); }
+}
+
+.banner-anim { &-arrow { opacity: 0; transition: opacity .3s @ease-out; } &:hover { .banner-anim-arrow { opacity: 1; } } }
+
+.top-wrap-background {
+  transform: translate3d(-3.4px, 1.7px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute; display: block; top: -3% !important; right: -3% !important; bottom: 0; left: -3% !important;
+  z-index: -1; width: 106%; height: 103%;
+  background: #031d6a url(https://gw.alipayobjects.com/zos/rmsportal/dNfVqkMedPxFcHJCNeYO.jpg) repeat scroll center 0;
+  background-size: cover;
+}
+
+.banner {
+  background-size: contain; overflow: hidden; height: 687px;
+  font-family: PingFang SC, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  .page { max-width: 1248px; }
+  .slogan { position: relative !important; margin: 0; color: #fff; font-size: 68px; font-family: webfont, sans-serif; line-height: 82px; letter-spacing: 2.5px; text-align: center; text-shadow: 0 6px 27px #02114c; }
+  .logo, .banner-logo { display: block; margin: 256px auto 32px; text-align: center; color: #fff; font-weight: 600; font-size: clamp(22px, 2.6vw, 40px); line-height: 1.15; letter-spacing: 0.6px; text-shadow: 0 6px 22px rgba(2, 17, 76, 0.35); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; transition: color .2s ease, transform .2s ease, text-shadow .2s ease; will-change: transform; }
+  & &-anim { margin: 0 auto 64px; height: 600px; box-shadow: 0 20px 32px rgba(1, 4, 8, .12); background: #fff; border-radius: 8px; &-elem { .banner-bg { width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden; background-position: center; background-repeat: no-repeat; } } }
+}
+
+.footer {
+  background: linear-gradient(to bottom, #031D6A, #000E48);
+  color: #fff;
+}
+
+.footer-wrap {
+  padding: 72px 24px 144px;
+
+  .footer-item {
+    display: inline-block;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 24px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    div {
+      margin-bottom: 12px;
+      font-size: 14px;
+
+      a {
+        color: rgba(256, 256, 256, 0.9);
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 21px 0;
+  line-height: 22px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.6);
+
+  a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
