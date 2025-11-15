@@ -31,7 +31,7 @@ function Header(props) {
         }}
       >
         <span className="tip-img"><img src={child.img} alt="img" /></span>
-        <div className="tip-content">
+        <div className="tip-content cursor-pointer">
           {child.title}
           <div>{child.desc}</div>
         </div>

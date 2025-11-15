@@ -13,5 +13,7 @@ module.exports = function(webpackConfig) {
     'tween-one/es': 'tween-one/lib',
   });
 
+  // Tailwind 集成改为使用 CLI 预构建，不在 webpack 中加载 postcss 插件
+
   return webpackConfig;
 };
