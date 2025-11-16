@@ -7,6 +7,8 @@
     "antd": "^3.0.0",
     "dompurify": "^2.4.7",
     "enquire-js": "^0.1.0",
+    "highlight.js": "^11.9.0",
+    "markdown-to-jsx": "^7.4.0",
     "prop-types": "^15.6.0",
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^2.0.0",
@@ -18,7 +20,11 @@
     "react-github-button": "^0.1.11",
     "react-html5video": "^2.5.1",
     "react-loadable": "^5.5.0",
+    "react-markdown": "^5.0.3",
     "react-router-dom": "^5.3.4",
+    "react-syntax-highlighter": "^15.6.6",
+    "rehype-highlight": "^5.0.2",
+    "remark-gfm": "^3.0.1",
     "showdown": "^1.9.1",
     "styled-components": "^6.1.19"
   },
@@ -39,6 +45,7 @@
     "expect": "^21.2.1",
     "gh-pages": "^1.1.0",
     "pre-commit": "^1.2.2",
+    "raw-loader": "^0.5.1",
     "redbox-react": "^1.5.0"
   },
   "pre-commit": [
