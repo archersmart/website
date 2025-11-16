@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "antd": "^3.0.0",
+    "dompurify": "^2.4.7",
     "enquire-js": "^0.1.0",
     "prop-types": "^15.6.0",
     "rc-banner-anim": "^2.4.5",
@@ -18,6 +19,7 @@
     "react-html5video": "^2.5.1",
     "react-loadable": "^5.5.0",
     "react-router-dom": "^5.3.4",
+    "showdown": "^1.9.1",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
