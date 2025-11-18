@@ -16,32 +16,11 @@ const Loading = () => (
   </div>
 );
 
-const ProductDetail = Loadable({
-  loader: () => new Promise(resolve =>
-    require.ensure([], require => resolve(require('../pages/products/ProductDetail').default), 'product-detail')
-  ),
-  loading: Loading,
-});
-const CaseStudiesList = Loadable({
-  loader: () => new Promise(resolve =>
-    require.ensure([], require => resolve(require('../pages/case-studies/CaseStudiesList').default), 'case-studies-list')
-  ),
-  loading: Loading,
-});
-const CaseStudyDetail = Loadable({
-  loader: () => new Promise(resolve =>
-    require.ensure([], require => resolve(require('../pages/case-studies/CaseStudyDetail').default), 'case-study-detail')
-  ),
-  loading: Loading,
-});
-
 export default function AppRouter() {
   const routes = React.createElement(Switch, { key: 'routes' },
     React.createElement(Route, { exact: true, path: '/', component: Home }),
     React.createElement(Route, { exact: true, path: '/products/aps', component: APS }),
     React.createElement(Route, { exact: true, path: '/customer-case', component: CustomerCase }),
-    React.createElement(Route, { exact: true, path: '/case-studies', component: CaseStudiesList }),
-    React.createElement(Route, { exact: true, path: '/case-studies/:id', component: CaseStudyDetail })
   );
   return React.createElement(Router, null,
     React.createElement(RouteLoading, null),

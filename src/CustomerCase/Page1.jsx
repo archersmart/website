@@ -191,7 +191,11 @@ function IndustryCase() {
         maskClosable
         wrapClassName="customer-case-md"
       >
-        <div style={{ maxHeight: '70vh', overflowY: 'auto', padding: 16 }}>
+        <div style={{ 
+          maxHeight: '70vh', 
+          overflowY: 'auto', 
+          padding: 16,
+        }}>
           {mdLoading ? (
             <div style={{ textAlign: 'center', padding: 24 }}>
               <Spin tip="加载中..." />
